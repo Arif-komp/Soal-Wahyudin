@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .pdf-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .pdf-viewer {
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%;
+            position: relative;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .pdf-viewer embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .pdf-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+        }
+        .pdf-list li {
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .pdf-list a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .pdf-list a:hover {
+            text-decoration: underline;
+        }
+        .download-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .download-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="pdf-container">
+        <div class="pdf-viewer">
+            <embed id="pdfViewer" src="" type="application/pdf">
+        </div>
+        <ul class="pdf-list">
+            <li>SOAL UTS GANJIL</li>
+            <li>SOAL UTS GENAP</li>
+            <li><a href="#" onclick="viewPDF('UTS GANJIL - SOAL IPS KELAS 5.pdf')">IPS kls-5</a></li>
+            <li><a href="#" onclick="viewPDF('UTS GENAP - SOAL IPS KELAS 5.pdf')">IPS kls-5</a></li>
+            <li><a href="#" onclick="viewPDF('UTS GANJIL - SOAL PKN KELAS 5.pdf')">PKN kls-5</a></li>
+            <li><a href="#" onclick="viewPDF('UTS GENAP - SOAL PKN KELAS 5.pdf')">PKN kls-5</a></li>
+            <li><a href="#" onclick="viewPDF('UTS GANJIL - SOAL PKN KELAS 5.pdf')">PKN kls-5.1</a></li>
+
+            <li><a href="#" onclick="viewPDF('UTS GENAP - SOAL IPS KELAS 6.pdf')">IPS kls-6</a></li>
+            <li><a href="#" onclick="viewPDF('UTS GANJIL - SOAL IPS KELAS 6.pdf')">IPS kls-6</a></li>
+            <li><a href="#" onclick="viewPDF('UTS GENAP - SOAL PKN KELAS 6.pdf')">PKN kls-6</a></li>
+            <li><a href="#" onclick="viewPDF('UTS GANJIL - SOAL PKN KELAS 6.pdf')">PKN kls-6</a></li>
+<LI><LI><LI>
+            <li>SOAL UAS GANJIL</li>
+            <li>SOAL UAS GENAP</li>
+            <li><a href="#" onclick="viewPDF('UAS GANJIL - SOAL IPS KELAS 5.pdf')">IPS kls-5</a></li>
+            <li><a href="#" onclick="viewPDF('UAS GENAP - SOAL IPS KELAS 5.pdf')">IPS kls-5</a></li>
+            <li><a href="#" onclick="viewPDF('UAS GANJIL - SOAL PKN KELAS 5.pdf')">PKN kls-5</a></li>
+            <li><a href="#" onclick="viewPDF('UAS GENAP - SOAL PKN KELAS 5.pdf')">PKN kls-5</a></li>
+
+            <li><a href="#" onclick="viewPDF('UAS GANJIL - SOAL IPS KELAS 6.pdf')">IPS kls-6</a></li>
+            <li><a href="#" onclick="viewPDF('UAS GENAP - SOAL IPS KELAS 6.pdf')">IPS kls-6</a></li>
+            <li><a href="#" onclick="viewPDF('UAS GANJIL - SOAL PKN KELAS 6.pdf')">PKN kls-6</a></li>
+            <li><a href="#" onclick="viewPDF('UAS GENAP - SOAL PKN KELAS 6.pdf')">PKN kls-6</a></li>
+        </ul>
+        <a id="downloadLink" href="" download class="download-link">Download PDF</a>
+    </div>
+
+    <script>
+        function viewPDF(file) {
+            document.getElementById('pdfViewer').src = file;
+            document.getElementById('downloadLink').href = file;
+        }
+    </script>
+</body>
+</html>
